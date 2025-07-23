@@ -22,7 +22,7 @@ env = environ.Env(
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 
 # Security settings
 SECRET_KEY = env('SECRET_KEY')
@@ -226,10 +226,13 @@ ACCOUNT_LOGIN_METHODS = ['email']
 # ACCOUNT_USERNAME_REQUIRED = False
 # ACCOUNT_PASSWORD_REQUIRED = True
 
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory' 
-ACCOUNT_CONFIRM_EMAIL_ON_GET = True 
-# # ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True 
-# ACCOUNT_LOGOUT_REDIRECT_URL = '/'
+ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+ACCOUNT_CONFIRM_EMAIL_ON_GET = True
+ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
+ACCOUNT_AUTHENTICATION_METHOD = "email"
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_EMAIL_REQUIRED = True
+
 
 ACCOUNT_EMAIL_SUBJECT_PREFIX = 'Diamond Resume ' 
 ACCOUNT_DEFAULT_HTTP_PROTOCOL = 'http'
