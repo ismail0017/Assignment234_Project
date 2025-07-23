@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Sample Page - NiceAdmin
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1>Sample dashboard</h1>
+  <p>This is some sample content extending the base template.</p>
+   <a href="{% url 'web:resume_list' %}" class="btn btn-primary">Go To The Resumes</a>
+</div>
+{% endblock %}

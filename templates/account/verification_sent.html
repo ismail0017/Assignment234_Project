@@ -1,0 +1,17 @@
+{# templates/account/verification_sent.html #}
+{% extends 'guest_base.html' %}
+{% load i18n %}
+{% block title %}{% trans "Verify Your Email Address" %} - Resume Builder{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card shadow-lg p-4" style="width: 100%; max-width: 500px;">
+        <div class="card-body text-center">
+            <h2 class="card-title mb-4">{% trans "Verify Your Email Address" %}</h2>
+            <p class="mb-3">{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize this process. This is Important... Please check your spam folder if you do not see it.{% endblocktrans %}</p>
+            <p class="mb-3">{% trans "If you don't receive the email, please check your spam folder or try again later." %}</p>
+            
+        </div>
+    </div>
+</div>
+{% endblock %}

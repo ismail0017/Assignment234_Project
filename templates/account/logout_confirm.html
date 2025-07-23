@@ -1,0 +1,22 @@
+{# templates/account/logout_confirm.html #}
+{% extends 'resume_base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Confirm Sign Out" %} - Resume Builder{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card shadow-lg p-4" style="width: 100%; max-width: 450px;">
+        <div class="card-body">
+            <h2 class="card-title text-center mb-4">{% trans "Confirm Sign Out" %}</h2>
+            <p class="text-center mb-4">{% trans 'You are about to sign out. Are you sure?' %}</p>
+
+            <form method="post" action="{% url 'account_logout' %}">
+                {% csrf_token %}
+                <button class="btn btn-danger w-100 py-2" type="submit">{% trans 'Confirm Sign Out' %}</button>
+            </form>
+            <p class="text-center mt-3"><a href="javascript:history.back()" class="btn btn-secondary w-100">{% trans "Go Back" %}</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}

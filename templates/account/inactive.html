@@ -1,0 +1,18 @@
+{# templates/account/inactive.html #}
+{% extends 'resume_base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Account Inactive" %} - Resume Builder{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card shadow-lg p-4" style="width: 100%; max-width: 450px;">
+        <div class="card-body text-center">
+            <h2 class="card-title mb-4">{% trans "Account Inactive" %}</h2>
+            <p class="mb-3">{% trans "This account is inactive." %}</p>
+            <p>{% trans "Please contact support if you believe this is an error." %}</p>
+            <p><a href="{% url 'account_login' %}" class="btn btn-secondary mt-3">{% trans "Back to Login" %}</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
